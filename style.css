@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --clr-light: #fff;
+    --clr-main-bg: hsl(222, 26%, 31%);
+    --clr-toggle-bg: hsl(223, 31%, 20%);
+    --clr-screen-bg: hsl(224, 36%, 15%);
+
+    --clr-key-blue: hsl(225, 21%, 49%);
+    --clr-key-red:  hsl(6, 63%, 50%);
+    --clr-key-orange: hsl(30, 25%, 89%);
+
+    --clr-blue-shadow: hsl(224, 28%, 35%);
+    --clr-red-shadow: hsl(6, 70%, 34%);
+    --clr-orange-shadow: hsl(28, 16%, 65%);
+
+    --clr-blue-hover: hsl(225, 32%, 34%);
+    --clr-orange-hover: rgb(184, 184, 184);
+    --clr-red-hover:  hsl(6, 61%, 37%);
+
+    --clr-text: hsl(221, 14%, 31%);
+
+    --clr-another: rgb(172, 172, 172);
+}
+
+html {
+    user-select: none;
+}
+
+body.light-theme {
+    --clr-light: #fff;
+    --clr-main-bg: hsl(0, 0%, 90%);
+    --clr-toggle-bg: hsl(0, 5%, 81%);
+    --clr-screen-bg: hsl(0, 0%, 93%);
+
+    --clr-key-blue: hsl(185, 42%, 37%);
+    --clr-key-red:  hsl(25, 98%, 40%);
+    --clr-key-orange: hsl(30, 25%, 89%);
+
+    --clr-blue-shadow: hsl(185, 58%, 25%);
+    --clr-red-shadow: hsl(25, 99%, 27%);
+    --clr-orange-shadow: hsl(35, 11%, 61%);
+
+    --clr-blue-hover: hsl(185, 58%, 25%);
+    --clr-red-hover:  hsl(25, 99%, 27%);
+    --clr-orange-hover: hsl(35, 11%, 61%);
+
+    --clr-text: hsl(60, 10%, 19%);
+
+    --clr-another: rgb(172, 172, 172);
+
+    color: var(--clr-text);
+    transition: 0.3s ease-in-out;
+}
+
+body.purple-theme {
+    --clr-light: #fff;
+    --clr-main-bg: hsl(268, 75%, 9%);
+    --clr-toggle-bg: hsl(268, 71%, 12%);
+    --clr-screen-bg: hsl(268, 71%, 12%);
+
+    --clr-key-blue: hsl(281, 89%, 26%);
+    --clr-key-red:  hsl(176, 100%, 44%);
+    --clr-key-orange: hsl(268, 47%, 21%);
+
+    --clr-blue-shadow: hsl(285, 91%, 52%);
+    --clr-red-shadow: hsl(177, 92%, 70%);
+    --clr-orange-shadow: hsl(290, 70%, 36%);
+
+    --clr-blue-hover: hsl(285, 91%, 52%);
+    --clr-red-hover:  hsl(177, 92%, 70%);
+    --clr-orange-hover: hsl(290, 70%, 36%);
+
+    --clr-text: hsl(52, 100%, 62%);
+
+    --clr-another: rgb(172, 172, 172);
+
+    color: var(--clr-text);
+    transition: 0.3s ease-in-out;
+}
+
+body.blue-theme {
+    --clr-light: #fff;
+    --clr-main-bg: hsl(222, 26%, 31%);
+    --clr-toggle-bg: hsl(223, 31%, 20%);
+    --clr-screen-bg: hsl(224, 36%, 15%);
+
+    --clr-key-blue: hsl(225, 21%, 49%);
+    --clr-key-red:  hsl(6, 63%, 50%);
+    --clr-key-orange: hsl(30, 25%, 89%);
+
+    --clr-blue-shadow: hsl(224, 28%, 35%);
+    --clr-red-shadow: hsl(6, 70%, 34%);
+    --clr-orange-shadow: hsl(28, 16%, 65%);
+
+    --clr-blue-hover: hsl(224, 28%, 35%);
+    --clr-red-hover:  hsl(6, 70%, 34%);
+    --clr-orange-hover: hsl(28, 16%, 65%);
+
+    --clr-text: hsl(221, 14%, 31%);
+
+    --clr-another: rgb(172, 172, 172);
+
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-main-bg);
+    font-family: 'Spartan', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-light);
+    transition: 0.3s ease-in-out;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.container .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--clr-another);
+}
+
+.theme-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.number-theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 60px;
+    text-align: end;
+}
+
+.number-theme span {
+    cursor: pointer;
+}
+
+.toggle-btn {
+    width: 60px;
+    height: 24px;
+    padding: 4px;
+    background-color: var(--clr-toggle-bg);
+    border-radius: 30px;
+}
+
+.inner-circle {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--clr-key-red);
+    display: block;
+    margin-left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.calculator {
+    display: grid;
+}
+
+.value {
+    font-family: inherit;
+    margin-bottom: 20px;
+    height: 100px;
+    padding: 16px;
+    grid-column: span 4;
+    text-align: end;
+    font-size: 40px;
+    background-color: var(--clr-screen-bg);
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    word-wrap: break-word;
+    color: inherit;
+}
+
+.num-box {
+    display: grid;
+    width: 100%;
+    grid-column: 1 / 5;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    padding: 8px;
+    background-color: var(--clr-toggle-bg);
+    border-radius: 12px;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    /* cursor: pointer; */
+    background-color: var(--clr-key-orange);
+    margin: 8px;
+    color: var(--clr-text);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 24px;
+    transition: 0.2s ease-in;
+    box-shadow: inset 0 -3px 3px var(--clr-orange-shadow);
+}
+
+.reset,
+.equal {
+    grid-column: span 2;
+}
+
+.reset,
+.del {
+    color: #fff;
+    background-color: var(--clr-key-blue);
+    box-shadow: inset 0 -3px 3px var(--clr-blue-shadow);
+    font-size: 18px;
+}
+
+.equal {
+    color: #fff;
+    background-color: var(--clr-key-red);
+    box-shadow: inset 0 -3px 3px var(--clr-red-shadow);
+}
+
+body.purple-theme .equal {
+    color: hsl(198, 20%, 13%);
+}
+
+.num:active {
+    background-color: var(--clr-orange-hover)
+}
+
+.equal:active {
+    background-color: var(--clr-red-hover);
+}
+
+.reset:active,
+.del:active {
+    background-color: var(--clr-blue-hover);
+}
+
+footer {
+    color: inherit;
+    font-size: 11px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: blue;
+}
+
+@media only screen and (max-width: 430px) {
+    .container {
+        max-width: 350px;
+    }
+
+    .num {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .container {
+        max-width: 320px;
+        padding: 0 12px;
+    }
+
+    .num {
+        font-size: 16px;
+    }
+}
+
