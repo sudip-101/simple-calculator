@@ -41,7 +41,7 @@ three.onclick = function () {
 //     $("#value_input").val(str);
 // }
 
-backSpace = function ()
+const backSpace = function ()
 {
     const input = document.getElementById('value_input');
     let str= input.value;
