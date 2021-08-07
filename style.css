@@ -181,16 +181,25 @@ body {
     padding: 4px;
     background-color: var(--clr-toggle-bg);
     border-radius: 30px;
+    position: relative;
 }
 
 .inner-circle {
+    position: relative;
+    top: 0;
+    left: 0;
+    /* inset: 4px; */
     height: 16px;
     width: 16px;
     border-radius: 50%;
     background-color: var(--clr-key-red);
     display: block;
-    margin-left: 0;
-    transition: 0.3s ease-in-out;
+    transform: translateX(0);
+    /* margin: 0 4px; */
+    /* margin-left: 0; */
+    transition: left 0.3s ease-in-out,
+                background-color 0.3s ease-in-out,
+                transform 0.3s ease-in-out ;
 }
 
 .calculator {
@@ -294,7 +303,8 @@ footer a {
 
 @media only screen and (max-width: 430px) {
     .container {
-        max-width: 350px;
+        max-width: 375px;
+        padding: 0 16px;
     }
 
     .num {
@@ -303,13 +313,81 @@ footer a {
 }
 
 @media only screen and (max-width: 350px) {
+    body {
+        font-size: 14px;
+    }
+    
     .container {
-        max-width: 320px;
-        padding: 0 12px;
+        max-width: 300px;
+        padding: 8px 12px;
     }
 
     .num {
-        font-size: 16px;
+        font-size: 14px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    footer {
+        font-size: 10px;
     }
 }
 
+@media only screen and (min-width: 1800px){
+    body {
+        font-size: 24px;
+    }
+
+    .container {
+        /* width: 1400px; */
+        max-width: 1400px;
+    }
+
+    .logo {
+        font-size: 64px;
+    }
+
+    .theme {
+        font-size: 24px;
+        gap: 24px;
+    }
+
+    .number-theme {
+        width: 200px;
+    }
+
+    .theme-head {
+        gap: 16px;
+    }
+
+    .toggle-btn {
+        width: 200px;
+        height: 72px;
+        padding: 16px;
+    }
+
+    .inner-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .value {
+        height: 200px;
+        border-radius: 24px;
+        margin: 40px 0;
+        font-size: 64px;
+        padding: 24px;
+    }
+
+    .num-box {
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .num {
+        margin: 20px;
+        height: 150px;
+        font-size: 36px;
+        border-radius: 24px;
+    }
+}
