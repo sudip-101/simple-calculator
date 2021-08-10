@@ -195,8 +195,6 @@ body {
   background-color: var(--clr-key-red);
   display: block;
   transform: translateX(0);
-  /* margin: 0 4px; */
-  /* margin-left: 0; */
   transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out,
     transform 0.3s ease-in-out;
 }
@@ -208,17 +206,21 @@ body {
 .value {
   font-family: inherit;
   margin-bottom: 20px;
-  height: 100px;
+  height: auto;
   padding: 16px;
   grid-column: span 4;
   text-align: end;
-  font-size: 40px;
+  font-size: 48px;
   background-color: var(--clr-screen-bg);
   font-weight: 700;
   width: 100%;
   border: none;
   border-radius: 12px;
   word-wrap: break-word;
+  color: inherit;
+}
+
+.value::placeholder {
   color: inherit;
 }
 
@@ -240,7 +242,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 60px;
-  /* cursor: pointer; */
   background-color: var(--clr-key-orange);
   margin: 8px;
   color: var(--clr-text);
